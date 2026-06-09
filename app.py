@@ -1,5 +1,6 @@
 import streamlit as st
-
+import tempfile
+from src.ocr_engine import OCREngine
 from src.allergen_detector import AllergenDetector
 from src.additive_detector import AdditiveDetector
 from src.health_risk import HealthRiskScorer
@@ -12,8 +13,8 @@ allergen_detector = AllergenDetector(
 additive_detector = AdditiveDetector(
     "knowledge_base/food_additives.json"
 )
-
 risk_scorer = HealthRiskScorer()
+ocr = OCREngine()
 
 st.set_page_config(
     page_title="NutriInsightX",
@@ -23,9 +24,36 @@ st.set_page_config(
 
 st.title("🥗 NutriInsightX")
 st.subheader("AI-Powered Food Label Analysis")
+uploaded_file = st.file_uploader(
+    "Upload Food Label Image",
+    type=["jpg", "jpeg", "png"]
+)
+
+ocr_text = ""
+
+if uploaded_file:
+
+    with tempfile.NamedTemporaryFile(
+        delete=False,
+        suffix=".jpg"
+    ) as tmp:
+
+        tmp.write(uploaded_file.read())
+        image_path = tmp.name
+
+    ocr_text = ocr.extract_text(image_path)
+
+    st.subheader("OCR Extracted Text")
+
+    st.text_area(
+        "OCR Result",
+        ocr_text,
+        height=150
+    )
 
 ingredients = st.text_area(
     "Enter Ingredients",
+    value=ocr_text,
     height=200,
     placeholder="Paste ingredients here..."
 )
@@ -98,4 +126,3 @@ if st.button("Analyze Food"):
     st.info(
         f"Risk Level: {risk['risk_level']}"
     )
-    
