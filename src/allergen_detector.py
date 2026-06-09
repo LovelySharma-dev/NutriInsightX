@@ -23,3 +23,5 @@ class AllergenDetector:
                     break
 
         return found
+    
+    

@@ -4,7 +4,7 @@ from src.ocr_engine import OCREngine
 from src.allergen_detector import AllergenDetector
 from src.additive_detector import AdditiveDetector
 from src.health_risk import HealthRiskScorer
-
+from src.utils import extract_ingredients
 # Load modules
 allergen_detector = AllergenDetector(
     "knowledge_base/allergens.json"
@@ -21,6 +21,15 @@ st.set_page_config(
     page_icon="🥗",
     layout="wide"
 )
+
+st.markdown("""
+<style>
+.stTextArea textarea {
+    font-weight: 500;
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 st.title("🥗 NutriInsightX")
 st.subheader("AI-Powered Food Label Analysis")
@@ -41,7 +50,11 @@ if uploaded_file:
         tmp.write(uploaded_file.read())
         image_path = tmp.name
 
-    ocr_text = ocr.extract_text(image_path)
+    raw_text = ocr.extract_text(image_path)
+
+    ocr_text = extract_ingredients(
+    raw_text
+    )
 
     st.subheader("OCR Extracted Text")
 
