@@ -1,6 +1,6 @@
 import streamlit as st
 import tempfile
-
+import pandas as pd
 from src.ocr_engine import OCREngine
 from src.allergen_detector import AllergenDetector
 from src.additive_detector import AdditiveDetector
@@ -8,7 +8,7 @@ from src.health_risk import HealthRiskScorer
 from src.utils import extract_ingredients
 from src.language_detector import LanguageDetector
 from src.recommender import RecommendationEngine
-
+from src.nutriscore_predictor import NutriScorePredictor
 
 # Load modules
 @st.cache_resource
@@ -26,6 +26,7 @@ additive_detector = AdditiveDetector(
 risk_scorer = HealthRiskScorer()
 language_detector = LanguageDetector()
 recommender = RecommendationEngine()
+nutriscore_predictor = NutriScorePredictor()
 
 st.set_page_config(
     page_title="NutriInsightX",
@@ -110,6 +111,32 @@ with col4:
     max_value=1000.0,
     value=0.0
 )
+    
+col5, col6, col7 = st.columns(3)
+
+with col5:
+    fat = st.number_input(
+        "Fat (g / 100g)",
+        min_value=0.0,
+        max_value=100.0,
+        value=0.0
+    )
+
+with col6:
+    protein = st.number_input(
+        "Protein (g / 100g)",
+        min_value=0.0,
+        max_value=100.0,
+        value=0.0
+    )
+
+with col7:
+    fiber = st.number_input(
+        "Fiber (g / 100g)",
+        min_value=0.0,
+        max_value=100.0,
+        value=0.0
+    )
 if st.button("Analyze Food"):
     language = language_detector.detect_language(
         ingredients
@@ -128,11 +155,25 @@ if st.button("Analyze Food"):
         saturated_fat,
         energy
     )
+    predicted_grade = nutriscore_predictor.predict(
+    energy,
+    fat,
+    saturated_fat,
+    sugar,
+    protein,
+    fiber,
+    salt
+    )
     recommendations = recommender.generate(
     allergens,
     risk
     )
     st.divider()
+    st.subheader("Predicted Nutri-Score")
+
+    st.success(
+    f"Grade {predicted_grade.upper()}"
+    )
     st.subheader("Detected Language")
 
     st.info(language.upper())
@@ -170,4 +211,22 @@ if st.button("Analyze Food"):
        st.write(f"{factor}: +{points}")
     st.info(
         f"Risk Level: {risk['risk_level']}"
+    )
+    risk_df = pd.DataFrame({
+    "Factor": [
+        "Sugar",
+        "Salt",
+        "Saturated Fat",
+        "Energy"
+    ],
+    "Points": [
+        risk["factors"]["Sugar"],
+        risk["factors"]["Salt"],
+        risk["factors"]["Saturated Fat"],
+        risk["factors"]["Energy"]
+    ]
+    })
+
+    st.bar_chart(
+    risk_df.set_index("Factor")
     )
