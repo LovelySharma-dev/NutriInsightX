@@ -5,6 +5,7 @@ from src.allergen_detector import AllergenDetector
 from src.additive_detector import AdditiveDetector
 from src.health_risk import HealthRiskScorer
 from src.utils import extract_ingredients
+from src.language_detector import LanguageDetector
 # Load modules
 allergen_detector = AllergenDetector(
     "knowledge_base/allergens.json"
@@ -15,7 +16,7 @@ additive_detector = AdditiveDetector(
 )
 risk_scorer = HealthRiskScorer()
 ocr = OCREngine()
-
+language_detector = LanguageDetector()
 st.set_page_config(
     page_title="NutriInsightX",
     page_icon="🥗",
@@ -92,7 +93,9 @@ with col4:
     )
 
 if st.button("Analyze Food"):
-
+    language = language_detector.detect_language(
+        ingredients
+    )
     allergens = allergen_detector.detect(
         ingredients
     )
@@ -109,7 +112,9 @@ if st.button("Analyze Food"):
     )
 
     st.divider()
+    st.subheader("Detected Language")
 
+    st.info(language.upper())
     st.subheader("Detected Allergens")
 
     if allergens:
