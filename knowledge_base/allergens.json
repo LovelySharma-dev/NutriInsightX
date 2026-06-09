@@ -1,0 +1,11 @@
+{
+  "milk": ["milk", "casein", "whey", "lactose"],
+  "peanuts": ["peanut", "groundnut"],
+  "soy": ["soy", "soya", "soybean"],
+  "egg": ["egg", "albumin"],
+  "wheat": ["wheat", "gluten"],
+  "tree_nuts": ["almond", "cashew", "walnut", "pistachio"],
+  "fish": ["fish", "anchovy", "salmon", "tuna"],
+  "shellfish": ["shrimp", "prawn", "crab", "lobster"],
+  "sesame": ["sesame", "sesamum"]
+}

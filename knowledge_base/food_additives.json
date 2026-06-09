@@ -1,0 +1,22 @@
+{
+  "E102": {
+    "name": "Tartrazine",
+    "risk": "May cause hyperactivity in sensitive individuals"
+  },
+  "E110": {
+    "name": "Sunset Yellow",
+    "risk": "Possible allergic reactions"
+  },
+  "E211": {
+    "name": "Sodium Benzoate",
+    "risk": "May cause sensitivity in some individuals"
+  },
+  "MSG": {
+    "name": "Monosodium Glutamate",
+    "risk": "May trigger headaches in sensitive people"
+  },
+  "Aspartame": {
+    "name": "Artificial Sweetener",
+    "risk": "Avoid for phenylketonuria patients"
+  }
+}

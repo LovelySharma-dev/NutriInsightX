@@ -1,0 +1,28 @@
+# Virtual Environments
+.venv/
+.venv311/
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# VS Code
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Outputs
+outputs/
+
+# Large datasets
+dataset/*.tsv
+dataset/*.csv
+dataset/*.sqlite
+
+# OS files
+.DS_Store
+Thumbs.db
