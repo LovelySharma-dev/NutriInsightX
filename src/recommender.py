@@ -8,24 +8,33 @@ class RecommendationEngine:
 
         recommendations = []
 
+        allergen_names = [
+            allergen["name"].lower()
+            for allergen in allergens
+        ]
+
         # Allergens
 
-        if "milk" in allergens:
+        if "milk" in allergen_names:
             recommendations.append(
                 "Avoid if lactose intolerant or allergic to milk."
             )
 
-        if "peanuts" in allergens:
+        if "peanuts" in allergen_names:
             recommendations.append(
                 "Unsafe for peanut allergy sufferers."
             )
 
-        if "soy" in allergens:
+        if "soy" in allergen_names:
             recommendations.append(
                 "Avoid if you have a soy allergy."
             )
 
-        if "wheat" in allergens:
+        if (
+            "wheat" in allergen_names
+            or
+            "wheat & gluten" in allergen_names
+        ):
             recommendations.append(
                 "Not suitable for people with gluten sensitivity."
             )

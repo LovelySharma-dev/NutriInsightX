@@ -180,19 +180,29 @@ if st.button("Analyze Food"):
     st.subheader("Detected Allergens")
 
     if allergens:
-        st.warning(", ".join(allergens))
+
+        for allergen in allergens:
+          name = allergen["name"].lower()
+
+          st.error(
+            f"{allergen['name']}\n\n"
+            f"Risk: {allergen['risk']}"
+          )
+
     else:
-        st.success("✅ No allergens detected")
+       st.success("✅ No allergens detected")
 
     st.subheader("Detected Additives")
 
     if additives:
         for additive in additives:
-            st.error(
-                f"{additive['code']} - "
-                f"{additive['name']}\n\n"
-                f"Risk: {additive['risk']}"
-            )
+
+          st.error(
+           f"{additive['code']} - "
+           f"{additive['name']}\n\n"
+           f"Category: {additive['category']}\n\n"
+           f"Risk: {additive['risk']}"
+        )
     else:
         st.success("✅ No additives detected")
 

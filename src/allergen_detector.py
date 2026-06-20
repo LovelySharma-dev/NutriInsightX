@@ -5,23 +5,29 @@ class AllergenDetector:
 
     def __init__(self, json_path):
 
-        with open(json_path, "r") as f:
+        with open(json_path, "r", encoding="utf-8") as f:
             self.allergens = json.load(f)
 
     def detect(self, ingredients_text):
 
-        ingredients_text = str(ingredients_text).lower()
+        ingredients_text = str(
+            ingredients_text
+        ).lower()
 
         found = []
 
-        for allergen, keywords in self.allergens.items():
+        for allergen, data in self.allergens.items():
 
-            for keyword in keywords:
+            for keyword in data["keywords"]:
 
                 if keyword.lower() in ingredients_text:
-                    found.append(allergen)
+
+                    found.append({
+                        "name": data["name"],
+                        "category": data["category"],
+                        "risk": data["risk"]
+                    })
+
                     break
 
         return found
-    
-    

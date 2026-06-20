@@ -1,11 +1,176 @@
+
 {
-  "milk": ["milk", "casein", "whey", "lactose"],
-  "peanuts": ["peanut", "groundnut"],
-  "soy": ["soy", "soya", "soybean"],
-  "egg": ["egg", "albumin"],
-  "wheat": ["wheat", "gluten",  "barley"],
-  "tree_nuts": ["almond", "cashew", "walnut", "pistachio"],
-  "fish": ["fish", "anchovy", "salmon", "tuna"],
-  "shellfish": ["shrimp", "prawn", "crab", "lobster"],
-  "sesame": ["sesame", "sesamum"]
+  "Milk": {
+    "name": "Milk",
+    "category": "Allergen",
+    "keywords": [
+      "milk",
+      "casein",
+      "whey",
+      "lactose",
+      "butter",
+      "cream",
+      "cheese",
+      "milk powder",
+      "skimmed milk",
+      "whole milk",
+      "ghee",
+      "curd",
+      "yogurt",
+      "caseinate",
+      "condensed milk"
+    ],
+    "risk": "Contains milk proteins or lactose; can trigger severe allergic reactions (anaphylaxis) or digestive intolerance."
+  },
+  "Peanuts": {
+    "name": "Peanuts",
+    "category": "Allergen",
+    "keywords": [
+      "peanut",
+      "groundnut",
+      "peanut oil",
+      "peanut flour",
+      "peanut butter",
+      "arachis oil"
+    ],
+    "risk": "High risk of severe, life-threatening allergic reactions (anaphylaxis), even with trace exposure."
+  },
+  "Soy": {
+    "name": "Soy",
+    "category": "Allergen",
+    "keywords": [
+      "soy",
+      "soya",
+      "soybean",
+      "soy lecithin",
+      "soy protein",
+      "soy flour",
+      "tofu",
+      "soy sauce",
+      "edamame"
+    ],
+    "risk": "May cause hypersensitivity reactions including hives, swelling, or digestive issues in soy-sensitive individuals."
+  },
+  "Egg": {
+    "name": "Egg",
+    "category": "Allergen",
+    "keywords": [
+      "egg",
+      "albumin",
+      "egg white",
+      "egg yolk",
+      "ovalbumin",
+      "lysozyme",
+      "lecithin (egg)",
+      "mayonnaise"
+    ],
+    "risk": "Common trigger for pediatric and adult allergies; can cause skin rashes, respiratory symptoms, or anaphylaxis."
+  },
+  "Wheat & Gluten": {
+    "name": "Wheat & Gluten",
+    "category": "Allergen",
+    "keywords": [
+      "wheat",
+      "gluten",
+      "barley",
+      "rye",
+      "semolina",
+      "malt",
+      "wheat flour",
+      "maida",
+      "atta",
+      "suji",
+      "dalia",
+      "spelt",
+      "farina"
+    ],
+    "risk": "Triggers allergic responses in wheat-allergic individuals and causes severe intestinal damage in people with Celiac disease."
+  },
+  "Tree Nuts": {
+    "name": "Tree Nuts",
+    "category": "Allergen",
+    "keywords": [
+      "almond",
+      "cashew",
+      "walnut",
+      "pistachio",
+      "hazelnut",
+      "pecan",
+      "macadamia",
+      "brazil nut",
+      "chestnut",
+      "chinquapin"
+    ],
+    "risk": "Frequently linked to severe, systemic allergic reactions and anaphylaxis."
+  },
+  "Fish": {
+    "name": "Fish",
+    "category": "Allergen",
+    "keywords": [
+      "fish",
+      "anchovy",
+      "salmon",
+      "tuna",
+      "cod",
+      "sardine",
+      "mackerel",
+      "trout",
+      "gelatin (fish)"
+    ],
+    "risk": "Can cause strong, lifelong allergic reactions; often persists into adulthood."
+  },
+  "Shellfish": {
+    "name": "Shellfish",
+    "category": "Allergen",
+    "keywords": [
+      "shrimp",
+      "prawn",
+      "crab",
+      "lobster",
+      "crayfish",
+      "oyster",
+      "mussel",
+      "clam",
+      "scallop",
+      "squid",
+      "octopus"
+    ],
+    "risk": "Highly potent allergen group; can trigger sudden and severe cardiovascular or respiratory distress."
+  },
+  "Sesame": {
+    "name": "Sesame",
+    "category": "Allergen",
+    "keywords": [
+      "sesame",
+      "sesamum",
+      "tahini",
+      "sesame oil",
+      "sesame seed",
+      "til"
+    ],
+    "risk": "Recognized globally as a major allergen; can induce hives, abdominal pain, or anaphylaxis."
+  },
+  "Mustard": {
+    "name": "Mustard",
+    "category": "Allergen",
+    "keywords": [
+      "mustard",
+      "mustard seed",
+      "mustard oil",
+      "mustard powder",
+      "sarson"
+    ],
+    "risk": "Can prompt severe allergic reactions, skin irritation, or respiratory discomfort in sensitive individuals."
+  },
+  "Celery": {
+    "name": "Celery",
+    "category": "Allergen",
+    "keywords": [
+      "celery",
+      "celery seed",
+      "celery root",
+      "celeriac"
+    ],
+    "risk": "Common allergen in European regions; can cause reactions ranging from mild oral allergy syndrome to severe anaphylaxis."
+  }
 }

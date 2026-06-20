@@ -1,22 +1,426 @@
 {
-  "E102": {
-    "name": "Tartrazine",
-    "risk": "May cause hyperactivity in sensitive individuals"
+  "Preservatives": {
+    "E200": {
+      "name": "Sorbic Acid",
+      "category": "Preservative",
+      "keywords": ["sorbic acid"],
+      "risk": "Can cause mild localized skin irritation or contact dermatitis"
+    },
+    "E202": {
+      "name": "Potassium Sorbate",
+      "category": "Preservative",
+      "keywords": ["potassium sorbate", "k-sorbate"],
+      "risk": "May trigger mild skin or eye irritation in rare hypersensitive cases"
+    },
+    "E210": {
+      "name": "Benzoic Acid",
+      "category": "Preservative",
+      "keywords": ["benzoic acid"],
+      "risk": "May aggravate asthma or hives in sensitive demographics"
+    },
+    "E211": {
+      "name": "Sodium Benzoate",
+      "category": "Preservative",
+      "keywords": ["sodium benzoate", "benzoate of soda"],
+      "risk": "May cause sensitivity in some individuals"
+    },
+    "E220": {
+      "name": "Sulfur Dioxide",
+      "category": "Preservative",
+      "keywords": ["sulfur dioxide", "sulphur dioxide"],
+      "risk": "Can provoke severe respiratory tightness or asthma attacks in asthmatics"
+    },
+    "E223": {
+      "name": "Sodium Metabisulfite",
+      "category": "Preservative",
+      "keywords": ["sodium metabisulfite", "sodium metabisulphite", "ins 223"],
+      "risk": "May destroy Vitamin B1 in food and trigger sulfite sensitivities"
+    },
+    "E224": {
+      "name": "Potassium Metabisulfite",
+      "category": "Preservative",
+      "keywords": ["potassium metabisulfite", "potassium metabisulphite", "ins 224"],
+      "risk": "High risk of respiratory distress for individuals with asthma"
+    },
+    "E250": {
+      "name": "Sodium Nitrite",
+      "category": "Preservative",
+      "keywords": ["sodium nitrite"],
+      "risk": "Strictly regulated due to potential formation of nitrosamines under high heat"
+    },
+    "E251": {
+      "name": "Sodium Nitrate",
+      "category": "Preservative",
+      "keywords": ["sodium nitrate"],
+      "risk": "Can convert to nitrites in the body; monitored for cardiovascular effects"
+    },
+    "E260": {
+      "name": "Acetic Acid (Glacial)",
+      "category": "Preservative",
+      "keywords": ["acetic acid", "glacial acetic acid", "ins 260"],
+      "risk": "Safe when diluted; highly concentrated forms can cause tissue irritation"
+    },
+    "E282": {
+      "name": "Calcium Propionate",
+      "category": "Preservative",
+      "keywords": ["calcium propionate", "calcium propanoate", "ins 282"],
+      "risk": "May cause mild, temporary headaches or behavioral changes in rare cases"
+    }
   },
-  "E110": {
-    "name": "Sunset Yellow",
-    "risk": "Possible allergic reactions"
+  "Colors": {
+    "E100": {
+      "name": "Curcumin",
+      "category": "Color",
+      "keywords": ["curcumin", "turmeric extract", "turmeric color"],
+      "risk": "Generally safe; high doses may cause mild gastrointestinal discomfort"
+    },
+    "E101": {
+      "name": "Riboflavin",
+      "category": "Color",
+      "keywords": ["riboflavin", "vitamin b2", "lactoflavin"],
+      "risk": "Generally safe; causes harmless bright yellow coloration of urine"
+    },
+    "E102": {
+      "name": "Tartrazine",
+      "category": "Color",
+      "keywords": ["tartrazine", "fd&c yellow no. 5", "yellow 5"],
+      "risk": "May cause hyperactivity in sensitive individuals"
+    },
+    "E104": {
+      "name": "Quinoline Yellow",
+      "category": "Color",
+      "keywords": ["quinoline yellow", "food yellow 13"],
+      "risk": "Possible link to hyperactivity in children; restricted in certain regions"
+    },
+    "E110": {
+      "name": "Sunset Yellow FCF",
+      "category": "Color",
+      "keywords": ["sunset yellow", "fd&c yellow no. 6", "yellow 6", "orange yellow s"],
+      "risk": "Possible allergic reactions"
+    },
+    "E120": {
+      "name": "Carmines",
+      "category": "Color",
+      "keywords": ["carmine", "cochineal extract", "carminic acid", "natural red 4"],
+      "risk": "Can trigger severe allergic reactions or anaphylaxis in sensitive people"
+    },
+    "E122": {
+      "name": "Carmoisine",
+      "category": "Color",
+      "keywords": ["carmoisine", "azorubine", "food red 3"],
+      "risk": "May cause allergic skin reactions and hyperactivity in children"
+    },
+    "E124": {
+      "name": "Ponceau 4R",
+      "category": "Color",
+      "keywords": ["ponceau 4r", "cochineal red a", "brilliant scarlet 4r"],
+      "risk": "Associated with intolerance in individuals sensitive to aspirins"
+    },
+    "E127": {
+      "name": "Erythrosine",
+      "category": "Color",
+      "keywords": ["erythrosine", "fd&c red no. 3", "red 3"],
+      "risk": "High intake may interfere with thyroid function due to iodine content"
+    },
+    "E129": {
+      "name": "Allura Red AC",
+      "category": "Color",
+      "keywords": ["allura red", "fd&c red no. 40", "red 40"],
+      "risk": "May cause mild allergic skin reactions or hives"
+    },
+    "E132": {
+      "name": "Indigo Carmine",
+      "category": "Color",
+      "keywords": ["indigo carmine", "indigotine", "fd&c blue no. 2"],
+      "risk": "Highly regulated; safe at standard limits but can cause mild skin irritation"
+    },
+    "E133": {
+      "name": "Brilliant Blue FCF",
+      "category": "Color",
+      "keywords": ["brilliant blue", "fd&c blue no. 1", "blue 1"],
+      "risk": "May trigger hypersensitivity reactions in individuals with pre-existing asthma"
+    },
+    "E140": {
+      "name": "Chlorophylls",
+      "category": "Color",
+      "keywords": ["chlorophyll", "chlorophylls", "natural green 3"],
+      "risk": "Naturally derived and generally recognized as safe with no notable risks"
+    },
+    "E150a": {
+      "name": "Plain Caramel",
+      "category": "Color",
+      "keywords": ["plain caramel", "caramel color", "caramel i"],
+      "risk": "Safe at standard dietary levels; no significant adverse risks"
+    },
+    "E150c": {
+      "name": "Ammonia Caramel",
+      "category": "Color",
+      "keywords": ["ammonia caramel", "caramel iii", "brewer's caramel"],
+      "risk": "Contains trace by-products; safe within evaluated regulatory thresholds"
+    },
+    "E150d": {
+      "name": "Sulfite Ammonia Caramel",
+      "category": "Color",
+      "keywords": ["sulfite ammonia caramel", "sulphite ammonia caramel", "caramel iv"],
+      "risk": "Subject to strict daily intake limits due to manufacturing by-products"
+    },
+    "E153": {
+      "name": "Vegetable Carbon",
+      "category": "Color",
+      "keywords": ["vegetable carbon", "carbon black", "vegetable black"],
+      "risk": "May affect medication absorption if consumed in exceptionally large quantities"
+    },
+    "E160a": {
+      "name": "Beta-Carotene",
+      "category": "Color",
+      "keywords": ["beta-carotene", "carotene", "provitamin a"],
+      "risk": "Excessive long-term intake may cause harmless yellowing of the skin"
+    },
+    "E160b": {
+      "name": "Annatto Extracts",
+      "category": "Color",
+      "keywords": ["annatto", "bixin", "norbixin"],
+      "risk": "Known to cause skin-related allergic reactions in susceptible individuals"
+    },
+    "E160c": {
+      "name": "Paprika Oleoresin",
+      "category": "Color",
+      "keywords": ["paprika oleoresin", "paprika extract", "capsanthin"],
+      "risk": "Generally safe; may cause mild stomach irritation if highly concentrated"
+    },
+    "E162": {
+      "name": "Beet Red",
+      "category": "Color",
+      "keywords": ["beet red", "betanin", "beetroot red"],
+      "risk": "Can cause harmless temporary discoloration of urine and stool"
+    },
+    "E163": {
+      "name": "Anthocyanins",
+      "category": "Color",
+      "keywords": ["anthocyanins", "grape skin extract"],
+      "risk": "Plant-derived antioxidant; no known adverse health risks"
+    }
   },
-  "E211": {
-    "name": "Sodium Benzoate",
-    "risk": "May cause sensitivity in some individuals"
+  "Emulsifiers": {
+    "E322": {
+      "name": "Lecithin",
+      "category": "Emulsifier",
+      "keywords": ["lecithin", "soy lecithin", "soya lecithin", "egg lecithin"],
+      "risk": "Derived from soy/egg; may pose a risk to individuals with severe allergies"
+    },
+    "E471": {
+      "name": "Mono- and Di-Glycerides of Fatty Acids",
+      "category": "Emulsifier",
+      "keywords": ["mono and diglycerides", "mono- and diglycerides", "glyceryl monostearate", "gms"],
+      "risk": "Generally recognized as safe; processed by the body like regular fats"
+    }
   },
-  "MSG": {
-    "name": "Monosodium Glutamate",
-    "risk": "May trigger headaches in sensitive people"
+  "Sweeteners": {
+    "E950": {
+      "name": "Acesulfame Potassium",
+      "category": "Sweetener",
+      "keywords": ["acesulfame potassium", "acesulfame k", "ace-k"],
+      "risk": "Subject to strict acceptable daily intake limits; monitored for gut health"
+    },
+    "E951": {
+      "name": "Aspartame",
+      "category": "Sweetener",
+      "keywords": ["aspartame", "equal", "nutrasweet"],
+      "risk": "Avoid for phenylketonuria patients"
+    },
+    "E954": {
+      "name": "Saccharin",
+      "category": "Sweetener",
+      "keywords": ["saccharin", "sodium saccharin"],
+      "risk": "May cause mild allergic reactions in people sensitive to sulfonamides"
+    },
+    "E955": {
+      "name": "Sucralose",
+      "category": "Sweetener",
+      "keywords": ["sucralose", "splenda"],
+      "risk": "Generally safe; ongoing studies monitor its long-term impact on gut microbiota"
+    },
+    "E420": {
+      "name": "Sorbitol",
+      "category": "Sweetener",
+      "keywords": ["sorbitol", "sorbitol syrup"],
+      "risk": "Excessive consumption can cause significant abdominal gas, cramps, and diarrhea"
+    },
+    "E421": {
+      "name": "Mannitol",
+      "category": "Sweetener",
+      "keywords": ["mannitol"],
+      "risk": "Known osmotic laxative; can cause digestive distress at moderate doses"
+    },
+    "E965": {
+      "name": "Maltitol",
+      "category": "Sweetener",
+      "keywords": ["maltitol", "maltitol syrup"],
+      "risk": "Can cause pronounced gastrointestinal bloating, gas, and laxative effects"
+    },
+    "E967": {
+      "name": "Xylitol",
+      "category": "Sweetener",
+      "keywords": ["xylitol"],
+      "risk": "Highly toxic to dogs; causes mild to moderate digestive gas in humans"
+    },
+    "E968": {
+      "name": "Erythritol",
+      "category": "Sweetener",
+      "keywords": ["erythritol"],
+      "risk": "Better tolerated than other sugar alcohols, but massive doses cause nausea"
+    }
   },
-  "Aspartame": {
-    "name": "Artificial Sweetener",
-    "risk": "Avoid for phenylketonuria patients"
+  "Acidity Regulators": {
+    "E270": {
+      "name": "Lactic Acid",
+      "category": "Acidity Regulator",
+      "keywords": ["lactic acid"],
+      "risk": "Generally safe; should be carefully monitored in formulas for young infants"
+    },
+    "E296": {
+      "name": "Malic Acid",
+      "category": "Acidity Regulator",
+      "keywords": ["malic acid"],
+      "risk": "Safe in standard amounts; high concentration can irritate the mouth"
+    },
+    "E330": {
+      "name": "Citric Acid",
+      "category": "Acidity Regulator",
+      "keywords": ["citric acid", "anhydrous citric acid"],
+      "risk": "Safe for consumption; frequent exposure to high amounts can erode tooth enamel"
+    },
+    "E331": {
+      "name": "Sodium Citrates",
+      "category": "Acidity Regulator",
+      "keywords": ["sodium citrate", "trisodium citrate", "monodium citrate"],
+      "risk": "Generally safe; excessive consumption may disrupt standard electrolyte balance"
+    },
+    "E334": {
+      "name": "Tartaric Acid",
+      "category": "Acidity Regulator",
+      "keywords": ["tartaric acid"],
+      "risk": "Large quantities can act as a laxative and cause gastrointestinal irritation"
+    },
+    "E338": {
+      "name": "Phosphoric Acid",
+      "category": "Acidity Regulator",
+      "keywords": ["phosphoric acid"],
+      "risk": "High intake over time is linked to decreased bone density and kidney stones"
+    },
+    "E500": {
+      "name": "Sodium Carbonates",
+      "category": "Acidity Regulator",
+      "keywords": ["sodium carbonate", "sodium bicarbonate", "baking soda"],
+      "risk": "Safe in standard food levels; high ingestion can upset stomach acidity"
+    }
+  },
+  "Stabilizers": {
+    "E406": {
+      "name": "Agar",
+      "category": "Stabilizer",
+      "keywords": ["agar", "agar-agar"],
+      "risk": "Acts as a dietary fiber; can cause mild abdominal discomfort if overconsumed"
+    },
+    "E407": {
+      "name": "Carrageenan",
+      "category": "Stabilizer",
+      "keywords": ["carrageenan"],
+      "risk": "May cause gastrointestinal inflammation or bloating in sensitive digestive systems"
+    },
+    "E410": {
+      "name": "Carob Bean Gum",
+      "category": "Stabilizer",
+      "keywords": ["carob bean gum", "locust bean gum"],
+      "risk": "Generally safe; may cause temporary gas or flatulence"
+    },
+    "E412": {
+      "name": "Guar Gum",
+      "category": "Stabilizer",
+      "keywords": ["guar gum"],
+      "risk": "High amounts can cause intestinal gas, abdominal cramps, or diarrhea"
+    },
+    "E414": {
+      "name": "Gum Arabic",
+      "category": "Stabilizer",
+      "keywords": ["gum arabic", "acacia gum"],
+      "risk": "Well tolerated; rare cases of mild occupational respiratory allergies"
+    },
+    "E415": {
+      "name": "Xanthan Gum",
+      "category": "Stabilizer",
+      "keywords": ["xanthan gum"],
+      "risk": "May act as a highly effective laxative if consumed in excessive quantities"
+    },
+    "E440": {
+      "name": "Pectins",
+      "category": "Stabilizer",
+      "keywords": ["pectin", "pectins"],
+      "risk": "Safe dietary fiber; extreme intake can cause temporary flatulence"
+    },
+    "E460": {
+      "name": "Microcrystalline Cellulose",
+      "category": "Stabilizer",
+      "keywords": ["microcrystalline cellulose", "cellulose gel", "cellulose gum"],
+      "risk": "Non-digestible fiber; passing large amounts can have a mild laxative effect"
+    }
+  },
+  "Flavor Enhancers": {
+    "E620": {
+      "name": "Glutamic Acid",
+      "category": "Flavor Enhancer",
+      "keywords": ["glutamic acid"],
+      "risk": "May trigger transient sensitivities or headaches in highly vulnerable individuals"
+    },
+    "E621": {
+      "name": "Monosodium Glutamate",
+      "category": "Flavor Enhancer",
+      "keywords": ["msg", "monosodium glutamate", "ajinomoto"],
+      "risk": "May trigger headaches in sensitive people"
+    },
+    "E627": {
+      "name": "Disodium Guanylate",
+      "category": "Flavor Enhancer",
+      "keywords": ["disodium guanylate", "sodium guanylate"],
+      "risk": "Metabolizes into purines; should be limited by individuals suffering from gout"
+    },
+    "E631": {
+      "name": "Disodium Inosinate",
+      "category": "Flavor Enhancer",
+      "keywords": ["disodium inosinate", "sodium inosinate"],
+      "risk": "Converts to uric acid; not recommended for individuals with gout conditions"
+    },
+    "vanillin": {
+      "name": "Vanillin",
+      "category": "Flavor Enhancer",
+      "keywords": ["vanillin", "ethyl vanillin", "vanilla flavor"],
+      "risk": "Generally safe; extremely rare allergic skin reactions reported"
+    }
+  },
+  "Antioxidants": {
+    "E300": {
+      "name": "Ascorbic Acid (Vitamin C)",
+      "category": "Antioxidant",
+      "keywords": ["ascorbic acid", "vitamin c"],
+      "risk": "Extremely safe; massive overconsumption may cause transient diarrhea"
+    },
+    "E307": {
+      "name": "Alpha-Tocopherol (Vitamin E)",
+      "category": "Antioxidant",
+      "keywords": ["alpha-tocopherol", "tocopherol", "vitamin e"],
+      "risk": "Safe within daily limits; excessive amounts may interfere with blood clotting"
+    },
+    "E320": {
+      "name": "Butylated Hydroxyanisole (BHA)",
+      "category": "Antioxidant",
+      "keywords": ["bha", "butylated hydroxyanisole"],
+      "risk": "Strictly controlled limits; subject to ongoing evaluations for long-term safety"
+    },
+    "E321": {
+      "name": "Butylated Hydroxytoluene (BHT)",
+      "category": "Antioxidant",
+      "keywords": ["bht", "butylated hydroxytoluene"],
+      "risk": "May cause allergic skin reactions; dietary intake levels are heavily monitored"
+    }
   }
 }
