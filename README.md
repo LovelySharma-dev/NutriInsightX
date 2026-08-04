@@ -1,8 +1,6 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:00693E,100:00C853&height=230&section=header&text=NutriInsightX&fontSize=64&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=AI-Powered%20Food%20Label%20Analysis%20%26%20Nutrition%20Intelligence&descAlignY=58&descSize=18&descColor=e8f5e9" />
-
-# 🥗 NutriInsightX
+![header](https://capsule-render.vercel.app/api?type=waving&color=0:1a1a2e,50:00693E,100:00C853&height=230&section=header&text=NutriInsightX&fontSize=64&fontColor=ffffff)
 
 
 ### AI-Powered Food Label Analysis & Nutrition Intelligence System
@@ -125,7 +123,7 @@ The system extracts ingredient information from food labels, detects allergens a
 <div align="center">
 
 
-<img src="https://geps.dev/progress/95?successColor=00C853&title=Model%20Accuracy" alt="Model Accuracy Progress" />
+![Random Forest](https://img.shields.io/badge/Random%20Forest-94.54%25-00C853?style=for-the-badge)
 </div>
 
 ---
